@@ -15,7 +15,7 @@ This is designed to run the database, DB web interface, and the bot within docke
   - Because I found it very easy to work with and I don't expect hundreds of thousands of records to be created
 - Why a database?
   - Do you really want to code out all the log for inserts, updates, removes, etc.?
-- Why the `overwrite/router.js`?
+- What is `overwrite/router.js` for?
   - There's currently a bug with `mongo-express` where you're not able to view the database statistics, this fixes that.
 
 ## The Bot
@@ -51,6 +51,24 @@ Run `docker-compose down`
 
 # Command Examples
 **If there are double quotes around something, that means it's required**
-- Adding users for the `hug` command
+- Allowing users to run the `hug` command
   - `!permissions set "hug" add users "123, 456"`
   - `!p s "hug" a u "123, 456"`
+- Removing users from being able to run the `hug` command
+  - `!permissions set "hug" remove users "123, 456"`
+  - `!p s "hug" rm u "123, 456"`
+- Allowing roles to run the `hug` command
+  - `!permissions set "hug" add roles "123, Admin"`
+  - `!p s "hug" a r "123, 456"`
+- Removing users from being able to run the `hug` command
+  - `!permissions set "hug" remove roles "123, Admin"`
+  - `!p s "hug" rm r "123, 456"`
+- Prining out the permissions for the `hug` command
+  - `!permissions get "hug"`
+  - `!p g "hug"`
+- Resetting the permissions for the `hug` command
+  - `!permissions reset "hug"`
+  - `!p rst "hug"`
+- Reloading the cogs
+  - `!reload`
+  - `!r"`
