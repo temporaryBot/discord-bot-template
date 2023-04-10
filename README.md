@@ -27,7 +27,7 @@ It's best to set yourself up with a virtual environment
 - In the project run, `python -m venv discord-bot`
 - Add `discord-bot/*` to the `.dockerignore` and `.gitignore` files
 - Activate your environment
-  - You can find the acivate scripts under `./discord-bot/Scripts`
+  - You can find the activate scripts under `./discord-bot/Scripts`
 - Install the required packages via `pip install -r requirements.txt`
 
 ## Environment Variables
