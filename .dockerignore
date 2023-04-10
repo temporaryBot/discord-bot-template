@@ -1,0 +1,10 @@
+logs/*
+overwrite/*
+mongo-db/*
+
+__pycache__
+
+Dockerfile
+
+.pylintrc
+.dockerignore

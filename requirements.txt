@@ -1,0 +1,4 @@
+discord.py==2.2.2
+prettytable==3.6.0
+pymongo==4.3.3
+python-dotenv==1.0.0
