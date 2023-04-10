@@ -1,5 +1,5 @@
 # discord-bot-template
-To serve as a template for a discord bot that runs as a docker container with a MongoDB as a database
+To serve as a template for a discord bot that runs as a docker container with MongoDB as a database
 
 # Disclaimers
 - This isn't some end-all-be-all solution, it's what I managed to design as a template for the discord bot I've developed
