@@ -1,3 +1,56 @@
 # discord-bot-template
+To serve as a template for a discord bot that runs as a docker container with a MongoDB as a database
 
-# docs coming later
+# Disclaimers
+- This isn't some end-all-be-all solution, it's what I managed to design as a template for the discord bot I've developed
+- This is designed to be very generic so that it can run in multiple servers
+- Every command has to have permissions configured for, unless the user has the `Administrator` permission.
+- Validated for only `Python 3.11`
+
+## Docker
+This is designed to run the database, DB web interface, and the bot within docker containers, so make sure to have that installed and configured.
+
+## MongoDB
+- Why MongoDB?
+  - Because I found it very easy to work with and I don't expect hundreds of thousands of records to be created
+- Why a database?
+  - Do you really want to code out all the log for inserts, updates, removes, etc.?
+- Why the `overwrite/router.js`?
+  - There's currently a bug with `mongo-express` where you're not able to view the database statistics, this fixes that.
+
+## The Bot
+- You don't need this running inside a docker container.
+- As you're developing the bot you can run it locally and just have the database and database web interface running
+
+# Setting up the bot
+## Virtual Environment
+It's best to set yourself up with a virtual environment
+
+- First make sure you have `Python 3.11` installed
+- In the project run, `python -m venv discord-bot`
+- Add `discord-bot/*` to the `.dockerignore` and `.gitignore` files
+- Activate your environment
+  - You can find the acivate scripts under `./discord-bot/Scripts`
+- Install the required packages via `pip install -r requirements.txt`
+
+## Environment Variables
+Make sure to rename `.sample.env` to `.env` and update the values with appropriate values
+
+## Docker Containers
+
+### Building the Containers
+Run `docker-compose up -d`
+<br><br>
+
+### Stopping the Contaiiners
+Run `docker-compose stop`
+<br><br>
+
+### Destroying the Contaiiners
+Run `docker-compose down`
+
+# Command Examples
+**If there are double quotes around something, that means it's required**
+- Adding users for the `hug` command
+  - `!permissions set "hug" add users "123, 456"`
+  - `!p s "hug" a u "123, 456"`
