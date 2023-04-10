@@ -68,4 +68,4 @@ Run `docker-compose down`
   - `!p rst "hug"`
 - Reloading the cogs
   - `!reload`
-  - `!r"`
+  - `!r`
