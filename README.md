@@ -18,11 +18,8 @@ This is designed to run the database, DB web interface, and the bot within docke
 - What is `overwrite/router.js` for?
   - There's currently a bug with `mongo-express` where you're not able to view the database statistics, this fixes that.
 
-## The Bot
-- You don't need this running inside a docker container.
-- As you're developing the bot you can run it locally and just have the database and database web interface running
-
 # Setting up the bot
+You don't need this running inside a docker container. As you're developing the bot you can run it locally and just have the database and database web interface running
 ## Virtual Environment
 It's best to set yourself up with a virtual environment
 
